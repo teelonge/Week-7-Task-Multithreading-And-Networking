@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/pokeliveFragment">
+
+    <fragment
+        android:id="@+id/pokeliveFragment"
+        android:name="com.example.week_7_task.ui.pokelive.PokeliveFragment"
+        android:label="PokeLive"
+        tools:layout="@layout/pokelive_fragment">
+        <action
+            android:id="@+id/action_pokeliveFragment_to_pokeDetails"
+            app:destination="@id/pokeDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/pokeDetails"
+        android:name="com.example.week_7_task.ui.pokedetails.PokeDetails"
+        android:label="PokeDetails"
+        tools:layout="@layout/poke_details_fragment">
+        <argument
+            android:name="pokemonId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendImage"
+        android:name="com.example.week_7_task.secondimplementation.SendImage"
+        android:label="send_image_fragment"
+        tools:layout="@layout/send_image_fragment" />
+    <fragment
+        android:id="@+id/message2"
+        android:name="com.example.week_7_task.secondimplementation.Message"
+        android:label="message_fragment"
+        tools:layout="@layout/message_fragment" />
+</navigation>
