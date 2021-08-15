@@ -10,7 +10,6 @@ import com.example.week_7_task.PokemonDetails
 import com.example.week_7_task.Pokemons
 import com.example.week_7_task.Result
 import com.example.week_7_task.UploadResponse
-import com.example.week_7_task.network.NetworkClient
 
 import com.example.week_7_task.network.PokemonEndPoints
 import com.example.week_7_task.network.ServiceBuilder

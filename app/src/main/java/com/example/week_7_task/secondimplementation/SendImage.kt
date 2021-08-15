@@ -151,5 +151,16 @@ class SendImage : Fragment() {
 
         viewModel.uploadImage(file, reqFile)
 
+        // Another way to generate the file
+        /*
+        val parcelFileDescriptor =
+            requireActivity().contentResolver.openFileDescriptor(imageUri!!, "r", null) ?: return
+
+        val inputStream = FileInputStream(parcelFileDescriptor.fileDescriptor)
+        val file = File(requireActivity().cacheDir,requireActivity().contentResolver.getFileName(imageUri!!))
+        val outputStream = FileOutputStream(file)
+        inputStream.copyTo(outputStream)
+         */
+
     }
 }
